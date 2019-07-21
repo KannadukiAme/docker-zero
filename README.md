@@ -5,4 +5,4 @@
 ## TODOLIST
 
 - [x] aria2
-- [ ] samba 
+- [x] samba 
