@@ -1,0 +1,18 @@
+version: "3"
+services:
+    aria2:
+        image: kannadukiame/aria2:alpine # aria2-alpine构建的docker镜像
+        volumes:
+            - ~/Downloads:/downloads # 下载目录
+            - ./aria2.conf:/etc/aria2.conf # aria2配置文件
+        ports:
+            - "6800:6800"
+
+    aria2-web:
+        image: nginx:alpine
+        volumes:
+            - ./AriaNg:/usr/share/nginx/html # nginx静态目录
+        ports:
+            - "8000:80"
+        depends_on:
+            - aria2
