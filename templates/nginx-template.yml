@@ -1,0 +1,11 @@
+# /usr/share/nginx/html web dir
+# /etc/nginx/conf.d config dir
+version: "3"
+services:
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./dist:/usr/share/nginx/html
+      - ./config:/etc/nginx/conf.d
+    ports:
+      - "80:80"
