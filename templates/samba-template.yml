@@ -1,0 +1,8 @@
+# /shared share dir
+version: "3"
+services:
+  samba:
+    image: pwntr/samba-alpine
+    volumes:
+      - ./share:/shared
+    network_mode: "host"

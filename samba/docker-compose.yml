@@ -1,7 +1,0 @@
-version: "3"
-services:
-    samba:
-        image: pwntr/samba-alpine 
-        volumes:
-            - /mnt/disk:/shared
-        network_mode: "host"
