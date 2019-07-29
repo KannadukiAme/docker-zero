@@ -1,0 +1,15 @@
+version: "3"
+services:
+  app:
+    image: emby/embyserver:latest
+    volumes:
+      - ./config:/config
+      - ./data:/mnt/share1
+      - ./data2:/mnt/share2
+    ports:
+      - 8096:8096
+      - 8920:8920
+    environment:
+      - UID=1000
+      - GID=1000
+      - GIDLIST=1000
