@@ -5,4 +5,4 @@
 - [x] portainer
 - [x] emby
 - [ ] apache
-- [ ] nextcloud
+- [x] nextcloud
